@@ -1,0 +1,4 @@
+- Subscriptions!
+- Email fixed!
+- OCR for email
+- PubNub submission in server side
