@@ -6,7 +6,7 @@ var pubnub = PUBNUB.init({
      subscribe_key : 'sub-c-c213022c-f8aa-11e3-aa40-02ee2ddab7fe'
 });
 
-var channel = 'demo_client_id';
+var channel = 'demo_client_id2';
 
 
 
@@ -14,7 +14,7 @@ function pubNubSub(content) {
 	// TODO: debug several subs without refresh don't work. Move "subscribe" outside and work with "publish"
      pubnub.subscribe({
          channel : channel,
-         message : function(m){ alert(m) },
+         message : function(m){ console.log(m) },
          connect : publish
      });
 
@@ -35,8 +35,8 @@ function pubNubRead(cb) {
 /*
 		   stime = a[1];
 		   console.log("end: " + a[1], " start: " + a[2]);
-		   console.log(a[0]);
 */
+		   console.log(a[0]);
 		}
 	});
 

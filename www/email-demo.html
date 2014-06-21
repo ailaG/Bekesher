@@ -54,24 +54,32 @@
 <div class="container">
 <div class="starter-template">
 	<h1>Write your email!</h1>
-	<form>
+	<form ng-submit="saveToPubNub()" ng-controller="submit_form">
 		<fieldset>
-			<label for="email1">Email:</label>
-			<input type="email" name="email" ng-model="email" required>
+			<label for="email">Email:</label>
+			<input type="email" name="email" ng-model="email">
 		</fieldset>
 		<fieldset>
-			<label for="free-test">Free text:</label>
+			<label for="free-text">Free text:</label>
 			<input type="text" ng-model="free_text" id="free_text">
 		</fieldset>
 		<fieldset ng-controller="greetings_form">
 			<h2>Standard Greeting</h2>
-			<select ng-model="greetingsF.selected" ng-options="greeting as greeting.title for greeting in greetingsF.greetings track by greeting.title">
-				<option value="0" ng-hide="greetingsF.selected">None</option>
+			<select name="greeting" id="greeting" ng-model="greetingsF.selected" ng-options="greeting as greeting.title for greeting in greetingsF.greetings track by greeting.title">
+<!-- 				<option value="0" ng-hide="greetingsF.selected">None</option> -->
  			</select>
 		</fieldset>
-		<fieldset>
+		<fieldset ng-controller="portfolio_form">
 			<h2>Portfolio</h2>
-			
+			<p ng-repeat="item in portfolio_flat">
+				<label>
+					<input type="checkbox" checklist-model="portfolioS.checked">{{item}}
+				</label>
+			</p>
+<!--
+			<select multiple="true" name="portfolio" id="portfolio" ng-model="portfolioS.selected" ng-options="item for item in portfolio_flat">
+			</select>
+-->
 		</fieldset>
 		
 		<input type="submit" value="Send!">
@@ -81,7 +89,12 @@
 			<blockquote>
 				<p>To: {{email}}</p>
 				<p>{{free_text}}</p>
-				<div ng-controller="greetings_preview">{{greetingsF.selected.text}}</div>
+				<p ng-controller="greetings_preview">{{greetingsF.selected.text}}</p>
+				
+				{{portfolioS.selected}}
+				<ul>
+					<li ng-repeat="item in portfolioS.selected">{{portfolioS.item}}</li>
+				</ul>
 			</blockquote>
 		</section>
 	</form>

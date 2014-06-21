@@ -39,8 +39,9 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a href="#about">Network</a></li>
-        <li><a href="#contact">Setup</a></li>
+        <li><a href="email-demo.html">Send!</a></li>
+        <li><a href="setup.html">Setup</a></li>
+        <li><a href="stats.html">Stats</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
@@ -54,8 +55,9 @@
 
 
 <h1>Emails:</h1>
-<ul ng-controller="emails">
-	<li ng-repeat="email in emails">{{email}}</li>
+<ul ng-controller="archive" id="archive">
+
+	<li ng-repeat="item in emails">To: {{item.email}}, message: {{item.message}}</li>
 </ul>
 
 
