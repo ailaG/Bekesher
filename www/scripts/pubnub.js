@@ -32,11 +32,6 @@ function pubNubRead(cb) {
 		count: 100,
 		callback: function(a){
 			cb(a[0]);
-/*
-		   stime = a[1];
-		   console.log("end: " + a[1], " start: " + a[2]);
-*/
-		   console.log(a[0]);
 		}
 	});
 

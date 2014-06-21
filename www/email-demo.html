@@ -7,6 +7,7 @@
 
 	<title>Email Demo</title>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="common.css">
 	<style type="text/css">
 		body {
 		    padding: 50px 0;
@@ -53,21 +54,22 @@
 
 <div class="container">
 <div class="starter-template">
-	<h1>Write your email!</h1>
-	<form ng-submit="saveToPubNub()" ng-controller="submit_form">
+	<h1>Stay Bekesher</h1>
+	<form ng-submit="saveToPubNub()" ng-controller="submit_form" method="post">
 		<fieldset>
 			<label for="email">Email:</label>
 			<input type="email" name="email" ng-model="email">
 		</fieldset>
 		<fieldset>
-			<label for="free-text">Free text:</label>
-			<input type="text" ng-model="free_text" id="free_text">
+			<label for="free_text">Free text:</label>
+			<input type="text" ng-model="free_text" name="free_text" id="free_text">
 		</fieldset>
 		<fieldset ng-controller="greetings_form">
 			<h2>Standard Greeting</h2>
 			<select name="greeting" id="greeting" ng-model="greetingsF.selected" ng-options="greeting as greeting.title for greeting in greetingsF.greetings track by greeting.title">
 <!-- 				<option value="0" ng-hide="greetingsF.selected">None</option> -->
  			</select>
+ 			<input type="hidden" name="greeting_text" value="{{greetingsF.selected.text}}">
 		</fieldset>
 		<fieldset ng-controller="portfolio_form">
 			<h2>Portfolio</h2>

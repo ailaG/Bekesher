@@ -49,8 +49,14 @@ var bekesher = angular.module('bekesher', [])
 		$scope.saveToPubNub = function(item, event) {
 			res = {};
 			res['email'] = this.email;
-			res['message'] = this.free_text +  this.greeting; // TODO: add portfolio
+			res['message'] = this.free_text;// +  this.greeting; // TODO: add portfolio
 			pubNubSub(res);
+			
+            var responsePromise = $http.get("http://www.galiaba.com/tmp/angelhack-bekesher-mail.php");
+			
+			// TODO: change
+			alert('sent ' + res['message'] + ' to ' + res['email']);
+			
 			return false;
 		}
 	})
@@ -59,13 +65,6 @@ var bekesher = angular.module('bekesher', [])
 		pubNubRead(function(items){
 			$scope.emails = items;
 			$scope.$apply($scope.emails);
-/*
-					        scope.$apply(function() {
-					        scope.tags.push(item);
-					    });
-
-*/
-
-			});
+		});
 	})
 ;

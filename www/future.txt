@@ -1,4 +1,11 @@
-- Subscriptions!
-- Email fixed!
+- Setup
+
+- Portfolio auto select
+- Note about which event you met at (set when you enter);
+- Email in AWS
 - OCR for email
 - PubNub submission in server side
+- Financial model
+
+
+- TODOs
