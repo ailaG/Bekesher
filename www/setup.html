@@ -53,38 +53,11 @@
 
 <div class="container">
 <div class="starter-template">
-	<h1>Write your email!</h1>
-	<form>
-		<fieldset>
-			<label for="email1">Email:</label>
-			<input type="email" name="email" ng-model="email" required>
-		</fieldset>
-		<fieldset>
-			<label for="free-test">Free text:</label>
-			<input type="text" ng-model="free_text" id="free_text">
-		</fieldset>
-		<fieldset ng-controller="greetings_form">
-			<h2>Standard Greeting</h2>
-			<select ng-model="greetingsF.selected" ng-options="greeting as greeting.title for greeting in greetingsF.greetings track by greeting.title">
-				<option value="0" ng-hide="greetingsF.selected">None</option>
- 			</select>
-		</fieldset>
-		<fieldset>
-			<h2>Portfolio</h2>
-			
-		</fieldset>
-		
-		<input type="submit" value="Send!">
 
-		<section id="preview">
-			<h1>E-mail preview</h1>
-			<blockquote>
-				<p>To: {{email}}</p>
-				<p>{{free_text}}</p>
-				<div ng-controller="greetings_preview">{{greetingsF.selected.text}}</div>
-			</blockquote>
-		</section>
-	</form>
+
+
+
+
 </div><!-- bootstrap template -->
 </div><!-- container -->
 

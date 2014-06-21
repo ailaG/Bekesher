@@ -1,94 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="bekesher">
 <head>
 	<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Email Results</title>
+	<title>Email Stats</title>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<style type="text/css">
 		body {
-		    padding-top: 50px;
+		    padding: 50px 0;
 		}
 	</style>
 	
 	
+	<!-- All in <head> to prevent FOUC -->
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap.min.js"></script>
 	<script src="http://cdn.pubnub.com/pubnub.min.js"></script>
 	<script src="http://pubnub.github.io/angular-js/scripts/pubnub-angular.js"></script>
-
+	
 	<script src="scripts/bekesher.js"></script>
 	<script src="scripts/pubnub.js"></script>
 
-	<script type="text/javascript">
-
-/*
-
-		var bekesher = angular.module('bekesher', [])
-			.controller('emails', ['$scope', function($scope) {
-				$scope.emails = ['dummy', 'foo'];
-			}]);
-*/
-var myApp = angular.module('myApp', []);
-
-myApp.controller('UserCtrl', ['$scope', function ($scope) {
-    
-	$scope.user = {};
-    $scope.user.details = {
-			"username": "Todd Motto",
-			"id": "89101112"
-		};
-    
-}]);
-
-
-
-
-
-/*
-		angularJsApp.controller('emails', ['$scope', function($scope){
-			$scope.emails = [];
-		}]);
-*/
-/*
-		var app = angular.module('app', []);
-		app.controller('emails', function($scope, $controller) {
-			$scope.emails = [];
-		});
-*/
 	
-	
-	
-	
-		/*
-function populate($scope, $http) {
-			// Assumes list of items. i.e. the first item in PN's response.
-		   $scope.lookupResult = {
-		      displayValue: "Not yet retrieved"
-		   };
-
-			
-		}
-		
-		function emails($scope) {
-			$scope.items = pubNubRead();
-		}
-	
-*/
-	</script>
 </head>
-
 <body>
-<div ng-app="myApp">
-    <div ng-controller="UserCtrl">
-        <p class="username">Welcome, {{ user.details.username }}</p>
-        <p class="id">User ID: {{ user.details.id }}</p>
-    </div>
-</div>
 
-<!--
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -104,12 +42,10 @@ function populate($scope, $http) {
         <li><a href="#about">Network</a></li>
         <li><a href="#contact">Setup</a></li>
       </ul>
-    </div><!--/.nav-collapse -- >
+    </div><!--/.nav-collapse -->
   </div>
 </div>
--->
 
-<!--
 
 
 <div class="container" ng-app="bekesher">
@@ -121,11 +57,10 @@ function populate($scope, $http) {
 <ul ng-controller="emails">
 	<li ng-repeat="email in emails">{{email}}</li>
 </ul>
--->
 
 
-<!-- </div> --><!-- bootstrap template -->
-<!-- </div> --><!-- container -->
+</div><!-- bootstrap template -->
+</div><!-- container -->
 
 </body>
 </html>
