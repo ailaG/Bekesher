@@ -45,14 +45,14 @@ var bekesher = angular.module('bekesher', [])
 		$scope.portfolioS = portfolioS;
 	})
 	
-	.controller('submit_form', function($scope) {
+	.controller('submit_form', function($scope, $http) {
 		$scope.saveToPubNub = function(item, event) {
 			res = {};
 			res['email'] = this.email;
 			res['message'] = this.free_text;// +  this.greeting; // TODO: add portfolio
 			pubNubSub(res);
 			
-            var responsePromise = $http.get("http://www.galiaba.com/tmp/angelhack-bekesher-mail.php");
+//            var responsePromise = $http.jsonp("http://www.galiaba.com/tmp/angelhack-bekesher-mail.php");
 			
 			// TODO: change
 			alert('sent ' + res['message'] + ' to ' + res['email']);

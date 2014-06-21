@@ -6,7 +6,7 @@ var pubnub = PUBNUB.init({
      subscribe_key : 'sub-c-c213022c-f8aa-11e3-aa40-02ee2ddab7fe'
 });
 
-var channel = 'demo_client_id2';
+var channel = 'demo_client_id3';
 
 
 
