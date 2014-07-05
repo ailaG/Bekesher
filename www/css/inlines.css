@@ -4,7 +4,8 @@
  */
 
 
-body {
+body,
+input[type="submit"] {
 	font-family: "Arial", sans-serif;
 	font-size: 14px;
 }
@@ -29,3 +30,17 @@ a {
 	font-size: 1.7em;
 }
 
+
+form#send fieldset h1,
+form#send fieldset h2 {
+	font-size: 1em;
+}
+
+form#send input[type="email"],
+form#send input[type="text"] {
+	line-height: 4.5em;
+}
+
+form#send input[type="submit"] {
+	line-height: 2.9em;
+}

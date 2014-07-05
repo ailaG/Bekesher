@@ -13,3 +13,12 @@
 #header nav a {
 	display: inline-block;
 }
+
+
+form#send #focus h2 {
+	display: inline;
+}
+
+form#send input[type="submit"] {
+	border-radius: 5px;
+}

@@ -35,3 +35,19 @@ a {
 fieldset {
 	border: 0;
 }
+
+fieldset:not(.basics), 
+fieldset.basics input {
+	border-bottom: 1px solid #e2e2e2;
+}
+
+form#send input[type="email"],
+form#send input[type="text"] {
+	border: 0;
+}
+
+form#send input[type="submit"] {
+	background: #e26438 url("../images/send_button.png") no-repeat 10px 10px;
+	border: 0;
+	color: white;
+}
