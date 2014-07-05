@@ -51,3 +51,7 @@ form#send input[type="submit"] {
 	border: 0;
 	color: white;
 }
+
+#preview blockquote {
+	border-left: 4px solid #e2e2e2;
+}

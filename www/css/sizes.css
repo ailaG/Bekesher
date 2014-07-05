@@ -56,3 +56,13 @@ form#send input[type="submit"] {
 	padding-left: 45px; /* for the image */
 	padding-right: 15px;
 }
+
+#preview {
+	margin: 2em 0;
+}
+
+#preview blockquote {
+	margin: 0;
+	margin-left: 0.5em;	
+	padding-left: 0.5em;	
+}

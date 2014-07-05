@@ -1,60 +1,12 @@
-<!DOCTYPE html>
-<html ng-app="bekesher">
-<head>
-	<meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php
+	include('php/template.php');
+	$template_options = Array(
+		'title' => 'Bekesher - Stats',
+		'slug' => 'stats'
+	);
+	echo get_header($template_options);
 
-	<title>Email Stats</title>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	<style type="text/css">
-		body {
-		    padding: 50px 0;
-		}
-	</style>
-	
-	
-	<!-- All in <head> to prevent FOUC -->
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap.min.js"></script>
-	<script src="http://cdn.pubnub.com/pubnub.min.js"></script>
-	<script src="http://pubnub.github.io/angular-js/scripts/pubnub-angular.js"></script>
-	
-	<script src="scripts/bekesher.js"></script>
-	<script src="scripts/pubnub.js"></script>
-
-	
-</head>
-<body>
-
-<!-- Top menu -->
-
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-  	    <a class="navbar-brand" href="#">Bekesher</a>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="email-demo.html">Send!</a></li>
-        <li><a href="setup.html">Setup</a></li>
-        <li><a href="stats.html">Stats</a></li>
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div>
-</div>
-
-
-<!-- Content -->
-
-<div class="container" ng-app="bekesher">
-<div class="starter-template">
+?>
 
 <h1>Emails:</h1>
 <ul ng-controller="archive" id="archive">
@@ -62,8 +14,8 @@
 </ul>
 
 
-</div><!-- bootstrap template -->
-</div><!-- container -->
 
-</body>
-</html>
+
+<?php
+	echo get_footer($template_options);
+?>
