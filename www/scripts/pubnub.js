@@ -14,7 +14,7 @@ function pubNubSub(content) {
 	// TODO: debug several subs without refresh don't work. Move "subscribe" outside and work with "publish"
      pubnub.subscribe({
          channel : channel,
-         message : function(m){ console.log(m) },
+         message : function(m) {},
          connect : publish
      });
 

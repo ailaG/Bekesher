@@ -1,4 +1,4 @@
-// TODO: move greetings and portfolio into database
+// TODO: move greetings and portfolio into database (when I do the setup & signup pages)
 
 var bekesher = angular.module('bekesher', [])
 	.factory('greetingsF', function() {
@@ -10,7 +10,7 @@ var bekesher = angular.module('bekesher', [])
 	})
 	
 	.service('portfolioS', function() {
-		// TODO: Replace this with m2m DB (some projects fit into several categories)
+		// TODO: Replace this with many2many DB (some projects fit into several categories)
 		this.items = {
 			'1' : ['WP project 1', 'WP project 2'],
 			'2' : ['Angular web app'],
@@ -49,12 +49,10 @@ var bekesher = angular.module('bekesher', [])
 		$scope.saveToPubNub = function(item, event) {
 			res = {};
 			res['email'] = this.email;
-			res['message'] = this.free_text;// +  this.greeting; // TODO: add portfolio
+			res['message'] = this.free_text;
 			pubNubSub(res);
-			
-//            var responsePromise = $http.jsonp("http://www.galiaba.com/tmp/angelhack-bekesher-mail.php");
-			
-			// TODO: change
+						
+			// TODO: change. EW.
 			alert('sent ' + res['message'] + ' to ' + res['email']);
 			
 			return false;

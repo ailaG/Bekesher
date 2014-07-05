@@ -1,0 +1,31 @@
+/*
+ *	Text settings
+ *	e.g. font size, line height
+ */
+
+
+body {
+	font-family: "Arial", sans-serif;
+	font-size: 14px;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+#header {
+	line-height: 2em;
+}
+	#header img {
+		vertical-align: bottom;
+	}
+	#header nav {
+		letter-spacing: 0.03em;
+	}
+
+#content h1 {
+	font-family: "Oswald", "Arial", sans-serif;
+	font-size: 1.7em;
+}
+
