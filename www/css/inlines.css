@@ -43,4 +43,5 @@ form#send input[type="text"] {
 
 form#send input[type="submit"] {
 	line-height: 2.9em;
+	text-align: left;
 }

@@ -30,7 +30,7 @@
 			<h2>Portfolio</h2>
 			<p ng-repeat="item in portfolio_flat">
 				<label>
-					<input type="checkbox" checklist-model="portfolioS.checked">{{item}}
+					<input type="checkbox" name="portfolio_items[]" value="{{item}}" checklist-model="portfolioS.checked">{{item}}
 				</label>
 			</p>
 		</fieldset>
@@ -52,6 +52,9 @@
 				</ul>
 			</blockquote>
 		</section>
+		
+		<input type="submit" value="Send!">
+
 	</form>
 
 <?php

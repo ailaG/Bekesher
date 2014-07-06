@@ -55,6 +55,7 @@ form#send input[type="submit"] {
 	padding: 0;
 	padding-left: 45px; /* for the image */
 	padding-right: 15px;
+	width: 100%;
 }
 
 #preview {

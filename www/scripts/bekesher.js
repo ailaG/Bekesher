@@ -3,17 +3,18 @@
 var bekesher = angular.module('bekesher', [])
 	.factory('greetingsF', function() {
 		return { greetings : [
-			{id: '1', title: 'Wordpress', text: 'I do Wordpress (keywords: CMS, website)' },
-			{id: '2', title: 'Angular', text: 'My Angular is fab (keywords: apps, web app)' },
-			{id: '3', title: 'FED', text: 'I\'m a front end developer (keywords: html5, css3, Javascript)' }
+			{id: '1', title: 'Wordpress', text: 'I develop in Wordpress, among other things. Wordpress is a platform ("CMS") that makes managing your website easy.' },
+			{id: '2', title: 'Angular', text: 'I have done a project in AngularJS.' },
+			{id: '3', title: 'FED', text: 'I\'m a front end developer (HTML5, CSS3, Javascript)' }
 		]};
 	})
 	
 	.service('portfolioS', function() {
 		// TODO: Replace this with many2many DB (some projects fit into several categories)
 		this.items = {
-			'1' : ['WP project 1', 'WP project 2'],
-			'2' : ['Angular web app'],
+			'1' : [	'<a href="http://2014.olamot-con.org.il">Olamot 2014</a> built with Wordpress Multisite', 
+					'WP project 2'],
+			'2' : ['Bekesher - the app that sent you this e-mail'],
 			'3' : ['Awesome HTML5 app', 'Another frontend project']
 		}
 		
