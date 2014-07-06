@@ -14,7 +14,7 @@ var bekesher = angular.module('bekesher', [])
 		this.items = {
 			'1' : [	'<a href="http://2014.olamot-con.org.il">Olamot 2014</a> built with Wordpress Multisite', 
 					'WP project 2'],
-			'2' : ['Bekesher - the app that sent you this e-mail'],
+			'2' : ['Bekesher - the app that sent you this e-mail.'],
 			'3' : ['Awesome HTML5 app', 'Another frontend project']
 		}
 		

@@ -43,10 +43,13 @@
 			<h1>E-mail preview</h1>
 			<blockquote>
 				<p>To: {{email}}</p>
-				<p>{{free_text}}</p>
+
+				<p>Hi,</p>
+				<p>We met at the She Codes Demo Day.</p>
+				<p ng-show="free_text.length > 0">Regarding: {{free_text}}</p>
 				<p ng-controller="greetings_preview">{{greetingsF.selected.text}}</p>
 				
-				{{portfolioS.selected}}
+				<p>Some example projects:</p><ul>
 				<ul>
 					<li ng-repeat="item in portfolioS.selected">{{portfolioS.item}}</li>
 				</ul>
